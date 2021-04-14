@@ -5,7 +5,8 @@ public class BinaryTreeNode {
    private BinaryTreeNode rightChild;
 
 
-    public BinaryTreeNode(){
+    public BinaryTreeNode(int element){
+            this.element = element;
             leftChild = null;
             rightChild= null;
     }
@@ -28,19 +29,18 @@ public class BinaryTreeNode {
         return leftChild;
     }
 
-    public void setLeftChild(BinaryTreeNode leftChild) {
+
+    public void addLeftChild(BinaryTreeNode leftChild) {
         this.leftChild = leftChild;
+    }
+
+    public void addRightChild(BinaryTreeNode rightChild) {
+        this.rightChild = rightChild;
     }
 
     public BinaryTreeNode getRightChild() {
         return rightChild;
     }
-
-    public void setRightChld(BinaryTreeNode rightChild) {
-        this.rightChild = rightChild;
-    }
-
-
 
 
 }
