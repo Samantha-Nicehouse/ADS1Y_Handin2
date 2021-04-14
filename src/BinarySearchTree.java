@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class BinarySearchTree extends BinaryTree {
 
     int element;
@@ -12,7 +14,7 @@ public class BinarySearchTree extends BinaryTree {
 
     }
 
-    public BinaryTreeNode insert(BinaryTreeNode root, int element ){
+    private BinaryTreeNode insert(BinaryTreeNode root, int element ){
 
         if (root == null)
         {
@@ -30,10 +32,10 @@ public class BinarySearchTree extends BinaryTree {
     }
 
     public void removeElement(int element){
-        setRoot(remove(getRoot(),element));
+        setRoot(removeElement(getRoot(),element));
     }
 
-    public BinaryTreeNode removeElement(BinaryTreeNode root, int element)
+    private BinaryTreeNode removeElement(BinaryTreeNode root, int element)
     {
         if (root == null)
             return root;
@@ -49,7 +51,7 @@ public class BinarySearchTree extends BinaryTree {
             else if (root.getRightChild() == null)
                 return root.getRightChild();
 
-            root.setElement(minValue(root.getRightChild()));
+            root.setElement(findMin(root.getRightChild()));
 
             root.addRightChild(removeElement(root.getRightChild(),root.getElement()));
         }
@@ -57,7 +59,44 @@ public class BinarySearchTree extends BinaryTree {
         return root;
     }
 
-   public int findMin(int element){
-
+   public BinaryTreeNode findMin(){
+        BinaryTreeNode root = getRoot();
+       while(root.getLeftChild() != null){
+           root = root.getLeftChild();
+       }
+       return root;
    }
+    public BinaryTreeNode findMax(){
+        BinaryTreeNode root = getRoot();
+        while(root.getRightChild() != null){
+            root = root.getRightChild();
+        }
+        return root;
+    }
+   private int findMin(BinaryTreeNode root){
+        int min = root.getElement();
+        while(root.getLeftChild() != null){
+            min = root.getLeftChild().getElement();
+            root = root.getLeftChild();
+        }
+        return min;
+   }
+
+    public void rebalance()
+    {
+        ArrayList<BinaryTreeNode> order = inOrder();
+        setRoot(balanceTree(order,0,order.size()-1));
+    }
+    private BinaryTreeNode balanceTree(ArrayList<BinaryTreeNode> nodes, int start, int end)
+    {
+        if (start > end)
+            return null;
+
+        int mid = (start + end) / 2;
+        BinaryTreeNode node = nodes.get(mid);
+
+        node.addLeftChild(balanceTree(nodes,start,mid-1));
+        node.addRightChild(balanceTree(nodes,mid+1,end));
+        return node;
+    }
 }
