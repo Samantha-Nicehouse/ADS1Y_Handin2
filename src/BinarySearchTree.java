@@ -11,7 +11,7 @@ public class BinarySearchTree extends BinaryTree {
 
     public void insert(int element){
        setRoot(insert(getRoot(), element));
-
+       increaseSize();
     }
 
     private BinaryTreeNode insert(BinaryTreeNode root, int element ){
@@ -33,6 +33,7 @@ public class BinarySearchTree extends BinaryTree {
 
     public void removeElement(int element){
         setRoot(removeElement(getRoot(),element));
+        decreaseSize();
     }
 
     private BinaryTreeNode removeElement(BinaryTreeNode root, int element)

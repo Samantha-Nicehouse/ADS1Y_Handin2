@@ -20,14 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b323b68e-7cb4-4bfe-b875-3a674e54d8ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BinarySearchTreeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTreeNodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTreePrint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BinaryTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ADS1Y_Handin2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ADS1Y_Handin2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/BinarySearchTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/BinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/BinaryTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/BinaryTreeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADS1Y_Handin2/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BinaryTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinarySearchTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinaryTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTreeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,6 +69,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="test" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -86,7 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BinarySearchTreeTest.findMax">
+  <component name="RunManager" selected="JUnit.BinarySearchTreeTest.rebalance">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -98,51 +103,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.findMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
+      <module name="ADS1Y_Handin2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTreeTest.rebalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ADS1Y_Handin2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="findMax" />
+      <option name="METHOD_NAME" value="rebalance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.findMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryTreeTest.contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ADS1Y_Handin2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="findMin" />
+      <option name="MAIN_CLASS_NAME" value="BinaryTreeTest" />
+      <option name="METHOD_NAME" value="contains" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.insertOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryTreeTest.doesNotContain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ADS1Y_Handin2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="insertOne" />
+      <option name="MAIN_CLASS_NAME" value="BinaryTreeTest" />
+      <option name="METHOD_NAME" value="doesNotContain" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.removeElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinaryTreeTest.isNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ADS1Y_Handin2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="removeElement" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinaryTreeNodeTest.getRightChild" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ADS1Y_Handin2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BinaryTreeNodeTest" />
-      <option name="METHOD_NAME" value="getRightChild" />
+      <option name="MAIN_CLASS_NAME" value="BinaryTreeTest" />
+      <option name="METHOD_NAME" value="isNotEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BinarySearchTreeTest.findMax" />
-        <item itemvalue="JUnit.BinarySearchTreeTest.findMin" />
-        <item itemvalue="JUnit.BinarySearchTreeTest.removeElement" />
-        <item itemvalue="JUnit.BinarySearchTreeTest.insertOne" />
-        <item itemvalue="JUnit.BinaryTreeNodeTest.getRightChild" />
+        <item itemvalue="JUnit.BinarySearchTreeTest.rebalance" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="JUnit.BinaryTreeTest.doesNotContain" />
+        <item itemvalue="JUnit.BinaryTreeTest.contains" />
+        <item itemvalue="JUnit.BinaryTreeTest.isNotEmpty" />
       </list>
     </recent_temporary>
   </component>
@@ -183,5 +185,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/BinarySearchTreeTest.java</url>
+          <line>47</line>
+          <properties class="BinarySearchTreeTest" method="rebalance">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

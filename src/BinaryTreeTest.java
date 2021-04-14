@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BinaryTreeTest{
     BinarySearchTree tree;
@@ -11,9 +11,9 @@ public class BinaryTreeTest{
     @BeforeEach
     void setUp(){
         tree = new BinarySearchTree();
-        tree.insert(1);
         tree.insert(6);
         tree.insert(2);
+        tree.insert(1);
         tree.insert(10);
         tree.insert(13);
         tree.insert(12);
@@ -30,6 +30,7 @@ public class BinaryTreeTest{
         list.add(new BinaryTreeNode(19));
         list.add(new BinaryTreeNode(22));
         list.add(new BinaryTreeNode(25));
+
     }
     @Test
     void inOrder(){
@@ -37,10 +38,83 @@ public class BinaryTreeTest{
             assertEquals(node.getElement(),tree.inOrder().get(list.indexOf(node)).getElement());
         }
     }
+
+
     @Test
-    void notInOrder(){
-        assertEquals(list.get(2).getElement(), tree.inOrder().get(1).getElement());
-        assertEquals(list.get(2).getElement(), tree.inOrder().get(3).getElement());
-        assertEquals(list.get(3).getElement(), tree.inOrder().get(3).getElement());
+    void size(){
+        assertEquals(9,tree.size());
     }
+
+    @Test
+    void isNotEmpty(){
+        assertFalse(tree.isEmpty());
+    }
+
+    @Test
+    void contains(){
+        assertTrue(tree.contains(22));
+    }
+
+    @Test
+    void doesNotContain()
+    {
+        assertFalse(tree.contains(50));
+    }
+
+    @Test
+    void preOrder()
+    {
+        list=new ArrayList<>();
+        list.add(new BinaryTreeNode(6));
+        list.add(new BinaryTreeNode(2));
+        list.add(new BinaryTreeNode(1));
+        list.add(new BinaryTreeNode(10));
+        list.add(new BinaryTreeNode(13));
+        list.add(new BinaryTreeNode(12));
+        list.add(new BinaryTreeNode(19));
+        list.add(new BinaryTreeNode(25));
+        list.add(new BinaryTreeNode(22));
+        for(BinaryTreeNode node : list){
+            assertEquals(node.getElement(),tree.preOrder().get(list.indexOf(node)).getElement());
+        }
+    }
+
+
+    @Test
+    void postOrder()
+    {
+        list=new ArrayList<>();
+        list.add(new BinaryTreeNode(1));
+        list.add(new BinaryTreeNode(2));
+        list.add(new BinaryTreeNode(12));
+        list.add(new BinaryTreeNode(22));
+        list.add(new BinaryTreeNode(25));
+        list.add(new BinaryTreeNode(19));
+        list.add(new BinaryTreeNode(13));
+        list.add(new BinaryTreeNode(10));
+        list.add(new BinaryTreeNode(6));
+        for(BinaryTreeNode node : list){
+            assertEquals(node.getElement(),tree.postOrder().get(list.indexOf(node)).getElement());
+        }
+    }
+
+    @Test
+    void levelOrder()
+    {
+        list=new ArrayList<>();
+        list.add(new BinaryTreeNode(6));
+        list.add(new BinaryTreeNode(2));
+        list.add(new BinaryTreeNode(10));
+        list.add(new BinaryTreeNode(1));
+        list.add(new BinaryTreeNode(13));
+        list.add(new BinaryTreeNode(12));
+        list.add(new BinaryTreeNode(19));
+        list.add(new BinaryTreeNode(25));
+        list.add(new BinaryTreeNode(22));
+        for(BinaryTreeNode node : list){
+            assertEquals(node.getElement(),tree.levelOrder().get(list.indexOf(node)).getElement());
+        }
+    }
+
+
 }

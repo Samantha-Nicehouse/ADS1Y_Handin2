@@ -16,6 +16,7 @@ public class BinaryTree {
     {
         size++;
     }
+    protected void decreaseSize() {size --;}
     public int size()
     {
         return size;
@@ -88,57 +89,59 @@ public class BinaryTree {
     }
 
 
-    public ArrayList<BinaryTreeNode> levelOrder(){
-
-        ArrayList<BinaryTreeNode> list=new ArrayList();
-
-        int height=height();
-        for (int i=0;i<height;i++){
-            levelOrderTraversal(root,list,i);
-        }
-        return levelOrder();
-
-    }
-
-
-
-    private void levelOrderTraversal(BinaryTreeNode node, ArrayList<BinaryTreeNode> list,int no){
-
-        if (node!=null)
+    public ArrayList<BinaryTreeNode> levelOrder()
+    {
+        ArrayList<BinaryTreeNode> levelOrder = new ArrayList<>();
+        if(root ==null)
+            return null;
+        else
         {
-            levelOrderTraversal(node.getLeftChild(),list,no);
-            levelOrderTraversal(node.getRightChild(),list,no);
-
-        }
-    }
-
-    public int height(){
-        if (isEmpty())
-        {
-            return -1;
-        }
-        else{
-            return getHeight(root);
-        }
-    }
-
-
-    private int getHeight(BinaryTreeNode node){
-        if (node==null)
-        {
-            return -1;
-        }
-        else{
-            int heightL=getHeight(node.getLeftChild());
-            int heightR=getHeight(node.getRightChild());
-            if (heightL>heightR)
-                return heightL+1;
-            else if (heightL<heightR){
-                return heightR+1;
+            int levelNo = getNodeHeight(getRoot());
+            for(int i=0;i<levelNo+1;i++)
+            {
+                LevelOrderTraversal(root,levelOrder,i);
             }
-            else return heightL+1;
+            return levelOrder;
         }
     }
+    private void LevelOrderTraversal(BinaryTreeNode node,ArrayList<BinaryTreeNode> levelOrder,int levelNo)
+    {
+        if(node == null)
+        {
+            return;
+        }
+        if(levelNo == 0)
+        {
+            levelOrder.add(node);
+        }
+        else {
+            LevelOrderTraversal(node.getLeftChild(),levelOrder,levelNo-1);
+            LevelOrderTraversal(node.getRightChild(),levelOrder,levelNo-1);
+        }
+
+
+    }
+    protected int getNodeHeight(BinaryTreeNode node) {
+        if (node == null)
+        {
+            return -1;
+        }
+        return Math.max(getNodeHeight(node.getLeftChild()),getNodeHeight(node.getRightChild())) + 1;
+    }
+    public int height()
+    {
+        if(isEmpty())
+        {
+            return -1;
+        }
+        else
+        {
+            return getNodeHeight(root);
+        }
+
+    }
+
+
 
 
     private void inOrderTraversal(BinaryTreeNode node, ArrayList<BinaryTreeNode> list){
