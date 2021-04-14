@@ -41,7 +41,5 @@ class BinarySearchTreeTest {
         assertEquals(7,tree.findMax().getElement());
     }
 
-    @Test
-    void rebalance() {
-    }
+
 }
